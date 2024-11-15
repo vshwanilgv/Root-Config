@@ -31,7 +31,12 @@
     {
       "imports": {
         "@my-org/root-config": "//localhost:9000/my-org-root-config.js",
-        "@my-org/product": "//localhost:8080/my-org-product.js"
+        "@my-org/navbar": "//localhost:8082/my-org-navbar.js",
+        "@my-org/product": "//localhost:8084/my-org-product.js",
+        "@my-org/styleguide": "//localhost:8083/my-org-styleguide.js",
+        "@my-org/user": "//localhost:8085/my-org-user.js",
+        "@my-org/home": "//localhost:8087/my-org-home.js"
+       
       }
     }
   </script>
@@ -48,6 +53,8 @@
   <script>
     window.importMapInjector.initPromise.then(() => {
       import('@my-org/root-config');
+      import('@my-org/styleguide');
+
     });
   </script>
   <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
